@@ -8,3 +8,4 @@
 5. Build website
 6. Upload to some free hosting platform (money is tight)
 7. Profit $$$
+
