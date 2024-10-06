@@ -1,14 +1,18 @@
 # CSCI 2021 TA FAQ Website
 
-### How to run:
+### How to run on local build:
 
-'''
+```
+git clone https://github.com/Gitphin/csci-2021-ta-site.git
+```
+
+```
 npm install
-'''
+```
 
-'''
+```
 npm run dev
-'''
+```
 
 ## TODO:
 1. Film the videos
