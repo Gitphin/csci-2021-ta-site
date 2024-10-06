@@ -1,9 +1,9 @@
 import React from 'react';
 import {
   Box,
-  Button,
   Container,
   Heading,
+  Stack,
   Text,
   VStack,
   HStack,
@@ -11,7 +11,6 @@ import {
   Link,
   Flex,
   Image,
-  CardBody,
   Accordion,
   AccordionIcon,
   AccordionItem,
@@ -22,7 +21,7 @@ import {
 function App() {
   return (
     <Box>
-      {/* Navigation Bar */}
+      {/* Nav Bar */}
       <Flex
         as="nav"
         bg="maroon"
@@ -32,99 +31,170 @@ function App() {
         position="fixed"
         width="100%"
       >
-        <Heading size="lg">CSCI 2021 TA FAQ</Heading>
+        <Link
+          href="https://twin-cities.umn.edu/"
+        >
+          <Image alt="Logo"
+            boxSize="10"
+            mr={2}
+            mt={1}
+            src='../UMN-Logo.png' /></Link>
+        <Heading size="lg">CSCI 2021 TA</Heading>
         <Spacer />
-        <HStack spacing={8}>
-          <Link href="#about" _hover={{ textDecoration: 'none', color: 'teal.300' }}>About</Link>
-          <Link href="#faq" _hover={{ textDecoration: 'none', color: 'teal.300' }}>Story</Link>
-          <Link href="#contact" _hover={{ textDecoration: 'none', color: 'teal.300' }}>FAQ</Link>
+        <HStack spacing={{ base: 0, md: 8 }}>
+          <Link
+            href="#about"
+            p={4}
+            borderRadius="md"
+            fontWeight="bold"
+            _hover={{ textDecoration: 'none', color: 'gold', bg: 'maroon' }}
+            _active={{ color: 'maroon', bg: 'maroon.500' }}
+            transition="all 0.2s ease-in-out"
+          >
+            About</Link>
+
+          <Link
+            href="#story"
+            p={4}
+            borderRadius="md"
+            fontWeight="bold"
+            _hover={{ textDecoration: 'none', color: 'gold', bg: 'maroon' }}
+            _active={{ color: 'maroon', bg: 'maroon.500' }}
+            transition="all 0.2s ease-in-out"
+          >
+            Videos</Link>
+
+          <Link
+            href="#faq"
+            p={4}
+            borderRadius="md"
+            fontWeight="bold"
+            _hover={{ textDecoration: 'none', color: 'gold', bg: 'maroon' }}
+            _active={{ color: 'maroon', bg: 'maroon.500' }}
+            transition="all 0.2s ease-in-out"
+          >
+            FAQ</Link>
         </HStack>
       </Flex>
 
-      {/* Hero Section */}
-      <Box p={200} textAlign="center">
+      {/* About */}
+      <Box id="about" pt={160} textAlign="center">
         <Container maxW="container.md">
           <VStack spacing={4}>
-            <Heading size="4xl" bgGradient='linear(to-l, maroon, gold)' bgClip='text'>CSCI 2021 FAQ Site</Heading>
+            <Heading size="4xl" bgGradient='linear(to-l, maroon, gold)' bgClip='text'>CSCI 2021 Intro Site</Heading>
           </VStack>
         </Container>
       </Box>
-
-      {/* Services Section */}
-      <Box id="about" py={20}>
+      {/* About - Cards */}
+      <Box py={20}>
         <Container maxW="container.md" textAlign="center">
-          <Heading size="xl" mb={8}>About this Website</Heading>
-          <Text fontSize="lg" color="gray.600" mb={4}>
-            What this learning resource aims to help with
+          <Heading color="maroon" size="xl" mt={10} mb={2}>About this Website</Heading>
+          <Text fontSize="lg" color="gray" mb={4}>
+            We hope this learning resource will help incoming TAs with the following
           </Text>
-          <HStack spacing={6} justifyContent="center">
-            <Box p={5} shadow="md" borderWidth="1px">
-              <Heading fontSize="xl">Service One</Heading>
-              <Text mt={4}>Description of service one.</Text>
+          <Stack spacing={6}
+            justifyContent="center"
+            direction={{ base: "column", md: "row" }} >
+            <Box p={10} shadow="md" borderWidth="1px">
+              <Heading fontSize="xl" textAlign={{ base: "center", md: "left" }}>Answer your Questions</Heading>
+              <Text textAlign={{ base: "center", md: "left" }} w={{ base: "100%", md: "160px" }} mt={4}>Included below are some frequently asked questions by incoming CSCI 2021 TA's.</Text>
             </Box>
-            <Box p={5} shadow="md" borderWidth="1px">
-              <Heading fontSize="xl">Service Two</Heading>
-              <Text mt={4}>Description of service two.</Text>
+            <Box p={10} shadow="md" borderWidth="1px">
+              <Heading fontSize="xl" textAlign={{ base: "center", md: "left" }}>Learn from Experience</Heading>
+              <Text textAlign={{ base: "center", md: "left" }} w={{ base: "100%", md: "160px" }} mt={4}>We have provided videos that give you insight for our TAships in this course.</Text>
             </Box>
-            <Box p={5} shadow="md" borderWidth="1px">
-              <Heading fontSize="xl">Service Two</Heading>
-              <Text mt={4}>Description of service two.</Text>
+            <Box p={10} shadow="md" borderWidth="1px">
+              <Heading fontSize="xl" textAlign={{ base: "center", md: "left" }}>Lend a Helping Hand</Heading>
+              <Text textAlign={{ base: "center", md: "left" }} w={{ base: "100%", md: "160px" }} mt={4}>It is normal to be nervous! We aim to give you some help going in. You got this!</Text>
             </Box>
-            <Box p={5} shadow="md" borderWidth="1px">
-              <Heading fontSize="xl">Service Two</Heading>
-              <Text mt={4}>Description of service two.</Text>
-            </Box>
-            <Box p={5} shadow="md" borderWidth="1px">
-              <Heading fontSize="xl">Service Two</Heading>
-              <Text mt={4}>Description of service two.</Text>
-            </Box>
-          </HStack>
+          </Stack>
         </Container>
       </Box>
 
-      <Box
-        p = {5}
-        bg="white"
-        width="fit-content"
-        mx="auto"
-        my={8}
-      >
-        <Flex align="center" wrap="wrap" jusify="center" direction={{ base: 'column', md: 'row' }}>
-          <Image
-            src="https://via.placeholder.com/400x300"
-            alt="Panel Image"
-            rounded="lg"
-            mr={{ md: 8 }}
-          />
-          <Text fontSize="xl" mt={{ base: 4, md: 0 }}>This is a panel with image content.</Text>
-        </Flex>
+      {/* Experience */}
+      <Box id="story" borderWidth="1px" shadow="inner" pb={20}>
+        <Box textAlign="center">
+          <Heading bgGradient='linear(to-l, gold, maroon)' bgClip='text' size="xl" mt={20}>Experience from CSCI 2021 TAs</Heading>
+        </Box>
+        <Box
+          id="story"
+          p={5}
+          mx="auto"
+          maxW="1000"
+          width="90%"
+          my={8}
+          shadow="md"
+          borderWidth="1px"
+        >
+          <Flex align="center" direction={{ base: 'column', md: 'row' }}>
+            <Image
+              src="https://via.placeholder.com/400x300"
+              alt="Panel Image"
+              rounded="lg"
+              mr={{ md: 10 }}
+              mb={{ base: 4, md: 0 }}
+            />
+
+            <Box textAlign={{ base: "center", md: "left" }}>
+              <Heading color="maroon" size="xl" ml={{ base: 0, md: 50 }} mb={4}>
+                Video 1 People / Topic
+              </Heading>
+              <Text fontSize="xl" maxW="100%" ml={{ base: 0, md: 50 }} mb={20}>
+                Description of video and topic, will be short I think
+              </Text>
+            </Box>
+          </Flex>
+        </Box>
+
+        <Box
+          id="story"
+          p={5}
+          mx="auto"
+          maxW="1000"
+          width="90%"
+          my={8}
+          shadow="md"
+          borderWidth="1px"
+        >
+
+          <Flex align="center" direction={{ base: 'column', md: 'row-reverse' }}>
+            <Image
+              src="https://via.placeholder.com/400x300"
+              alt="Panel Image"
+              rounded="lg"
+              ml={{ md: 10 }}
+              mb={{ base: 4, md: 0 }}
+            />
+
+            <Box textAlign={{ base: "center", md: "left" }}>
+              <Heading color="maroon" size="xl" mr={{ base: 0, md: 50 }} mb={4}>
+                Video 2 People / Topic
+              </Heading>
+              <Text fontSize="xl" maxW="100%" mr={{ base: 0, md: 50 }} mb={20}>
+                Description of video and topic, will be short I think
+              </Text>
+            </Box>
+
+          </Flex>
+        </Box>
       </Box>
 
-      <Box
-        p={5}
-        bg="white"
-        width="fit-content"
-        mx="auto"
-        my="auto"
-      >
-        <Flex align="center" direction={{ base: 'column', md: 'row-reverse' }}>
-          <Image
-            src="https://via.placeholder.com/400x300"
-            alt="Panel Image"
-            rounded="lg"
-            ml={{ md: 8 }}
-          />
-          <Text fontSize="xl" mt={{ base: 4, md: 0 }}>This is a  image content.</Text>
-        </Flex>
+      {/* FAQ Section */}
+      <Spacer id="faq" />
+      <Box textAlign="center">
+        <Heading bgGradient='linear(to-l, maroon, gold)' bgClip='text' size="xl" mt={90}>CSCI 2021 FAQs</Heading>
       </Box>
+      <Box p={8} bg="white" mt={0} mb={160}>
+        <Container pb={10} shadow="md" borderWidth="1px" maxW="1000" width="100%" textAlign="center">
+          <Heading color="maroon" pt={10} pb={2}>Don't see your question? Reach out!</Heading>
 
+          <Text fontSize="lg" color="gray" mb={4}>
+            We hope to help and add on to this website! Please <Link color="gold" href="mailto:holim004@umn.edu " _hover={{ textDecoration: 'none', color: 'gold' }}>contact us</Link> for comments, suggestions, or concerns!
+          </Text>
+          <Accordion gap={2} borderWidth="1px" allowMultiple>
 
-      <Box p={8} bg="white">
-        <Container maxW="container.md" textAlign="center">
-          <Heading p={10}>Some FAQs</Heading>
-          <Accordion allowMultiple>
             <AccordionItem>
-              <AccordionButton>
+              <AccordionButton _expanded={{ bg: 'maroon', color: 'white' }}>
                 <Box flex="1" textAlign="left">
                   Accordion 1
                 </Box>
@@ -136,7 +206,43 @@ function App() {
             </AccordionItem>
 
             <AccordionItem>
-              <AccordionButton>
+              <AccordionButton _expanded={{ bg: 'maroon', color: 'white' }}>
+                <Box flex="1" textAlign="left">
+                  Accordion 2
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+              <AccordionPanel pb={4}>
+                Nulla facilisi. Phasellus at turpis ac nibh mattis tincidunt.
+              </AccordionPanel>
+            </AccordionItem>
+
+            <AccordionItem>
+              <AccordionButton _expanded={{ bg: 'maroon', color: 'white' }}>
+                <Box flex="1" textAlign="left">
+                  Accordion 2
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+              <AccordionPanel pb={4}>
+                Nulla facilisi. Phasellus at turpis ac nibh mattis tincidunt.
+              </AccordionPanel>
+            </AccordionItem>
+
+            <AccordionItem>
+              <AccordionButton _expanded={{ bg: 'maroon', color: 'white' }}>
+                <Box flex="1" textAlign="left">
+                  Accordion 2
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+              <AccordionPanel pb={4}>
+                Nulla facilisi. Phasellus at turpis ac nibh mattis tincidunt.
+              </AccordionPanel>
+            </AccordionItem>
+
+            <AccordionItem>
+              <AccordionButton _expanded={{ bg: 'maroon', color: 'white' }}>
                 <Box flex="1" textAlign="left">
                   Accordion 2
                 </Box>
@@ -153,10 +259,11 @@ function App() {
       {/* Footer */}
       <Box bg="maroon" color="white" py={8}>
         <Container maxW="container.md" textAlign="center">
-          <Text>&copy; CSCI 2021 TA FAQ</Text>
+          <Link fontSize="xl" href="https://github.com/Gitphin/csci-2021-ta-site" _hover={{ textDecoration: 'none', color: 'gold' }}>CSCI 2021 TA FAQ GitHub</Link>
+          <Text> Project by Alek Holiman, Anlei Chen, Curtis Kokuloku, Umut Tulay </Text>
         </Container>
       </Box>
-    </Box>
+    </Box >
   );
 }
 
