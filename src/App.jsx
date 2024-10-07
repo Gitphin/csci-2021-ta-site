@@ -35,8 +35,8 @@ function App() {
           href="https://twin-cities.umn.edu/"
         >
           <Image alt="Logo"
-            boxSize="10"
-            mr={2}
+            boxSize="12"
+            mr={{base: 8, md: 4}}
             mt={1}
             src='/UMN-Logo.png' /></Link>
         <Heading size="lg">CSCI 2021 TA</Heading>

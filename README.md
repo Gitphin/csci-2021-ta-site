@@ -20,7 +20,7 @@ npm run dev
 3. Research questions to add to the website
 4. ~~Create website design~~
 5. ~~Build website~~
-6. Upload to some free hosting platform (money is tight)
+6. ~~Upload to some free hosting platform (money is tight)~~
 7. Profit $$$
 
 
