@@ -38,7 +38,7 @@ function App() {
             boxSize="10"
             mr={2}
             mt={1}
-            src='../UMN-Logo.png' /></Link>
+            src='/UMN-Logo.png' /></Link>
         <Heading size="lg">CSCI 2021 TA</Heading>
         <Spacer />
         <HStack spacing={{ base: 0, md: 8 }}>
