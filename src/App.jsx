@@ -81,7 +81,7 @@ function App() {
       <Box id="about" pt={160} textAlign="center">
         <Container maxW="container.md">
           <VStack spacing={4}>
-            <Heading size="4xl" bgGradient='linear(to-l, maroon, gold)' bgClip='text'>CSCI 2021 Intro Site</Heading>
+            <Heading size="4xl" bgGradient='linear(to-l, maroon, gold)' bgClip='text'>CSCI 2021 TA Site</Heading>
           </VStack>
         </Container>
       </Box>
