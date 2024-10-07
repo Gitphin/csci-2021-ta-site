@@ -182,7 +182,7 @@ function App() {
       {/* FAQ Section */}
       <Spacer id="faq" />
       <Box textAlign="center">
-        <Heading bgGradient='linear(to-l, maroon, gold)' bgClip='text' size="xl" mt={90}>CSCI 2021 FAQs</Heading>
+        <Heading bgGradient='linear(to-l, maroon, gold)' bgClip='text' size="xl" mt={90}>CSCI 2021 TA FAQs</Heading>
       </Box>
       <Box p={8} bg="white" mt={0} mb={160}>
         <Container pb={10} shadow="md" borderWidth="1px" maxW="1000" width="100%" textAlign="center">
