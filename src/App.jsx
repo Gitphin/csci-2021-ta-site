@@ -128,7 +128,7 @@ function App() {
           <Flex align="center" direction={{ base: 'column', md: 'row' }}>
             <Box
               as="iframe"
-              width={{ base: "85%", md: "800px" }}
+              width={{ base: "90%", md: "800px" }}
               height="300px"
               src="https://www.youtube.com/embed/UJjBgU14hE0?si=Hpy01y7DUGQD0WS4"
               title="YouTube video player"
@@ -167,7 +167,7 @@ function App() {
 
             <Box
               as="iframe"
-              width={{ base: "85%", md: "800px" }}
+              width={{ base: "90%", md: "800px" }}
               height="300px"
               src="https://www.youtube.com/embed/Gebo6QhQv6s?si=Z5NL_LLDFDdh5fc_"
               title="YouTube video player"
