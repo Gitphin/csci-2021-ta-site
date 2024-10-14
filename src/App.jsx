@@ -36,7 +36,7 @@ function App() {
         >
           <Image alt="Logo"
             boxSize="12"
-            mr={{base: 8, md: 4}}
+            mr={{ base: 8, md: 4 }}
             mt={1}
             src='/UMN-Logo.png' /></Link>
         <Heading size="lg">CSCI 2021 TA</Heading>
@@ -117,7 +117,6 @@ function App() {
           <Heading bgGradient='linear(to-l, gold, maroon)' bgClip='text' size="xl" mt={20}>Experience from CSCI 2021 TAs</Heading>
         </Box>
         <Box
-          id="story"
           p={5}
           mx="auto"
           maxW="1000"
@@ -127,20 +126,27 @@ function App() {
           borderWidth="1px"
         >
           <Flex align="center" direction={{ base: 'column', md: 'row' }}>
-            <Image
-              src="https://via.placeholder.com/400x300"
-              alt="Panel Image"
+            <Box
+              as="iframe"
+              width={{ base: "400px", md: "800px" }}
+              height="300px"
+              src="https://www.youtube.com/embed/UJjBgU14hE0?si=Hpy01y7DUGQD0WS4"
+              title="YouTube video player"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
               rounded="lg"
               mr={{ md: 10 }}
+              mt={{ base: 10, md: 0 }}
               mb={{ base: 4, md: 0 }}
+              border="none"
             />
 
             <Box textAlign={{ base: "center", md: "left" }}>
-              <Heading color="maroon" size="xl" ml={{ base: 0, md: 50 }} mb={4}>
-                Video 1 People / Topic
+              <Heading color="maroon" size="xl" ml={{ base: 0, md: 50 }} mb={4} mr={{ base: 0, md: 10 }}>
+                Meet a CSCI 2021 TA
               </Heading>
-              <Text fontSize="xl" maxW="100%" ml={{ base: 0, md: 50 }} mb={20}>
-                Description of video and topic, will be short I think
+              <Text fontSize="xl" maxW="100%" ml={{ base: 0, md: 50 }} mb={{ base: 10, md: 20 }} mr={{ base: 0, md: 10 }}>
+                In this video you get the chance to hear from an experienced TA about how to handle some of the hardships of TAships!
               </Text>
             </Box>
           </Flex>
@@ -158,20 +164,28 @@ function App() {
         >
 
           <Flex align="center" direction={{ base: 'column', md: 'row-reverse' }}>
-            <Image
-              src="https://via.placeholder.com/400x300"
-              alt="Panel Image"
+
+            <Box
+              as="iframe"
+              width={{ base: "400px", md: "800px" }}
+              height="300px"
+              src="https://www.youtube.com/embed/Gebo6QhQv6s?si=Z5NL_LLDFDdh5fc_"
+              title="YouTube video player"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
               rounded="lg"
               ml={{ md: 10 }}
+              mt={{ base: 10, md: 0 }}
               mb={{ base: 4, md: 0 }}
+              border="none"
             />
 
             <Box textAlign={{ base: "center", md: "left" }}>
-              <Heading color="maroon" size="xl" mr={{ base: 0, md: 50 }} mb={4}>
-                Video 2 People / Topic
+              <Heading color="maroon" size="xl" mr={{ base: 0, md: 50 }} mb={4} ml={{ base: 0, md: 10 }}>
+                Being in hard situations
               </Heading>
-              <Text fontSize="xl" maxW="100%" mr={{ base: 0, md: 50 }} mb={20}>
-                Description of video and topic, will be short I think
+              <Text fontSize="xl" maxW="100%" mr={{ base: 0, md: 50 }} mb={{ base: 10, md: 20 }} ml={{ base: 0, md: 10 }}>
+                This video goes more in depth with some situations that may arise, effective techniques to use as a TA, and some helpful advice!
               </Text>
             </Box>
 
