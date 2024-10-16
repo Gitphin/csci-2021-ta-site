@@ -25,6 +25,7 @@ function App() {
       <Flex
         as="nav"
         bg="maroon"
+        opacity="0.9"
         color="white"
         p={4}
         alignItems="center"
@@ -209,63 +210,105 @@ function App() {
 
             <AccordionItem>
               <AccordionButton _expanded={{ bg: 'maroon', color: 'white' }}>
-                <Box flex="1" textAlign="left">
-                  Accordion 1
+                <Box flex="1" textAlign="left" fontWeight="bold">
+                  What should I do to prepare for office hours and labs?
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
               <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                For office hours, briefly review the lecture slides to refresh your understanding of the course content, especially if it has been a while since you took the course. Additionally, familiarize yourself with the project and lab write-ups, as many answers to student questions can be found there. For labs, your instructor may ask you to create some lab slides. Make sure to review the questions file and the lab code. While it’s not necessary for you to complete the lab, it is important to be familiar with the answers and code solutions.
               </AccordionPanel>
             </AccordionItem>
 
             <AccordionItem>
               <AccordionButton _expanded={{ bg: 'maroon', color: 'white' }}>
-                <Box flex="1" textAlign="left">
-                  Accordion 2
+                <Box flex="1" textAlign="left" fontWeight="bold">
+                  How should I respond to regrade requests or complaints from students?
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
               <AccordionPanel pb={4}>
-                Nulla facilisi. Phasellus at turpis ac nibh mattis tincidunt.
+                Be understanding but firm when addressing grading concerns. If you made a mistake while grading, apologize and correct the issue. If there isn’t an error in the grading, politely explain the student's issues and refer to the rubric when applicable. For any conceptual misunderstandings, clearly explain the concepts as best you can, and suggest that the student visit office hours if they are still confused.
               </AccordionPanel>
             </AccordionItem>
 
             <AccordionItem>
               <AccordionButton _expanded={{ bg: 'maroon', color: 'white' }}>
-                <Box flex="1" textAlign="left">
-                  Accordion 2
+                <Box flex="1" textAlign="left" fontWeight="bold">
+                  How do I follow up with students after providing support or resources?
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
               <AccordionPanel pb={4}>
-                Nulla facilisi. Phasellus at turpis ac nibh mattis tincidunt.
+                If you need to follow up with a student, a common approach is to send them a quick email with the information they were seeking. If the follow-up includes a lot of details, you can invite them to stop by during office hours if they have the time. Additionally, checking in with the student during the weekly labs is also a good option.
               </AccordionPanel>
             </AccordionItem>
 
             <AccordionItem>
               <AccordionButton _expanded={{ bg: 'maroon', color: 'white' }}>
-                <Box flex="1" textAlign="left">
-                  Accordion 2
+                <Box flex="1" textAlign="left" fontWeight="bold">
+                  What are some common pitfalls to avoid as a new TA?
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
               <AccordionPanel pb={4}>
-                Nulla facilisi. Phasellus at turpis ac nibh mattis tincidunt.
+                <li>Not managing time effectively during office hours</li>
+                <li>Thinking that you have to know everything</li>
+                <li>Underestimating grading time</li>
+                <li>Not asking for help from the instructor when there is some confusion</li>
+                <li>Not providing helpful feedback to students on the tests or projects</li>
+
               </AccordionPanel>
             </AccordionItem>
 
             <AccordionItem>
               <AccordionButton _expanded={{ bg: 'maroon', color: 'white' }}>
-                <Box flex="1" textAlign="left">
-                  Accordion 2
+                <Box flex="1" textAlign="left" fontWeight="bold">
+                  How do I know if I am giving effective feedback to students?
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
               <AccordionPanel pb={4}>
-                Nulla facilisi. Phasellus at turpis ac nibh mattis tincidunt.
+                Check in with the student to see if they understood your explanation and ask if they still have any questions. Pay attention to their body language and facial expressions—does it seem like things are clicking for them? If not, inquire about it. Sometimes, it can be helpful to ask the student to summarize your explanation in their own words.
               </AccordionPanel>
             </AccordionItem>
+
+            <AccordionItem>
+              <AccordionButton _expanded={{ bg: 'maroon', color: 'white' }}>
+                <Box flex="1" textAlign="left" fontWeight="bold">
+                  How do I handle students who are hesitant to seek help or ask questions?
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+              <AccordionPanel pb={4}>
+                Be welcoming as much as possible considering the professionalism required in the role. If you are nice to students and make them feel not judged, they might feel more comfortable approaching you with their concerns. You can start the conversation by sharing how you felt the same difficulties as a student while taking that class, which can help normalize their experience.
+              </AccordionPanel>
+            </AccordionItem>
+
+            <AccordionItem>
+              <AccordionButton _expanded={{ bg: 'maroon', color: 'white' }}>
+                <Box flex="1" textAlign="left" fontWeight="bold">
+                  How do I handle difficult students or conflicts in the class or during office hours?
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+              <AccordionPanel pb={4}>
+                Conflict management includes identifying, experiencing and handling the conflict. Keep in mind that understanding does not require agreement. Conflict can be caused by stress, overwhelm or control. As a TA, most of the conflicts arise due to grading issues or multiple false attempts by students. Remaining calm and addressing issues with empathy can help de-escalate situations. If that does not work, you should ask them to talk to the instructor.
+              </AccordionPanel>
+            </AccordionItem>
+
+            <AccordionItem>
+              <AccordionButton _expanded={{ bg: 'maroon', color: 'white' }}>
+                <Box flex="1" textAlign="left" fontWeight="bold">
+                  How do I communicate effectively with students?
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+              <AccordionPanel pb={4}>
+                To communicate effectively with students, it's important to establish trust. There are two ways of trust: affective trust and cognitive trust. Affective trust is that students think you are a “good person.” Cognitive trust is when they trust that you're competent. By building both types of trust, you can create positive learning environments where students feel comfortable asking questions and listening to your answers.
+              </AccordionPanel>
+            </AccordionItem>
+
           </Accordion>
         </Container>
       </Box>
